@@ -1,0 +1,67 @@
+[build-system]
+requires = [
+  "setuptools>=42",
+  "setuptools-scm>=8.0"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycvcam_viz"
+requires-python = ">= 3.10"
+dynamic = ["version"]
+description = "pycvcam vizualisation toolbox GUI"
+license = {file = "LICENSE"}
+authors = [
+{name = "Artezaru", email = "artezaru.github@proton.me"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.24.3",
+    "pycvcam>=1.3.7",
+    "matplotlib>=3.7.1",
+    "pyqt5>=5.15.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/Artezaru/pycvcam_viz"
+Documentation = "https://Artezaru.github.io/pycvcam_viz"
+Source = "https://github.com/Artezaru/pycvcam_viz"
+Tracker = "https://github.com/Artezaru/pycvcam_viz/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pycvcam_viz", "pycvcam_viz*"]
+exclude = ["laboratory", "laboratory.*", "tests", "tests*", "examples", "examples*"]
+
+[tool.setuptools.package-data]
+"pycvcam_viz.resources" = ["*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pycvcam_viz.__version__.__version__"}
+
+[project.optional-dependencies]
+dev = [
+    "sphinx",
+    "pydata-sphinx-theme",
+    "numpydoc",
+    "pytest",
+    "pytest-cov",
+    "bumpver",
+    "twine",
+    "wheel",
+    "build",
+    "setuptools",
+    "setuptools-scm",
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+
+
+
