@@ -6,9 +6,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>API Reference &#8212; pycvcam_viz 0.0.4 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Module Index &#8212; pycvcam_viz 0.0.4 documentation</title>
   
   
   
@@ -41,14 +40,19 @@
     <script src="_static/documentation_options.js?v=8c5712d9"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'py-modindex';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Usage" href="usage.html" />
-    <link rel="prev" title="Installation" href="installation.html" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
+
+    <script>
+      DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
+    </script>
+
+
   </head>
   
   
@@ -131,8 +135,8 @@
 </li>
 
 
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="#">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
     API Reference
   </a>
 </li>
@@ -187,10 +191,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -201,8 +201,10 @@
       
       
       
+        
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -224,8 +226,8 @@
 </li>
 
 
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="#">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
     API Reference
   </a>
 </li>
@@ -259,15 +261,6 @@
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"></div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
@@ -288,31 +281,7 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
-
-<nav aria-label="Breadcrumb" class="d-print-none">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">API Reference</span></li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
+              <div class="bd-header-article d-print-none"></div>
               
               
               
@@ -320,38 +289,23 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="api-reference">
-<h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">#</a></h1>
-<p>The package <code class="docutils literal notranslate"><span class="pre">pycvcam_viz</span></code> is composed of the following functions, classes, and modules:</p>
-<dl class="py class" id="module-pycvcam_viz">
-<dt class="sig sig-object py" id="pycvcam_viz.ZernikeDistortionVisualizerUI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pycvcam_viz.</span></span><span class="sig-name descname"><span class="pre">ZernikeDistortionVisualizerUI</span></span><a class="reference internal" href="_modules/pycvcam_viz/zernike_distortion_visualizer.html#ZernikeDistortionVisualizerUI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pycvcam_viz.ZernikeDistortionVisualizerUI" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
-<p>Main application window for visualizing Zernike distortion files.
-Supports multiple file selection for superimposed plotting and deletion.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pycvcam_viz.ZernikeDistortionVisualizerUI.open_files">
-<span class="sig-name descname"><span class="pre">open_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycvcam_viz/zernike_distortion_visualizer.html#ZernikeDistortionVisualizerUI.open_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pycvcam_viz.ZernikeDistortionVisualizerUI.open_files" title="Link to this definition">#</a></dt>
-<dd><p>Open a file dialog to select and load Zernike distortion files.
-Supports multiple file selection.</p>
-</dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pycvcam_viz.ZernikeDistortionVisualizerUI.remove_selected_files">
-<span class="sig-name descname"><span class="pre">remove_selected_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycvcam_viz/zernike_distortion_visualizer.html#ZernikeDistortionVisualizerUI.remove_selected_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pycvcam_viz.ZernikeDistortionVisualizerUI.remove_selected_files" title="Link to this definition">#</a></dt>
-<dd><p>Remove the selected files from the list and the internal data storage.</p>
-</dd></dl>
+   <h1>Python Module Index</h1>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pycvcam_viz.ZernikeDistortionVisualizerUI.update_plot">
-<span class="sig-name descname"><span class="pre">update_plot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycvcam_viz/zernike_distortion_visualizer.html#ZernikeDistortionVisualizerUI.update_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pycvcam_viz.ZernikeDistortionVisualizerUI.update_plot" title="Link to this definition">#</a></dt>
-<dd><p>Update the matplotlib plot based on the selected files and figure type.</p>
-</dd></dl>
+   <div class="modindex-jumpbox">
+   <a href="#cap-p"><strong>p</strong></a>
+   </div>
 
-</dd></dl>
-
-<p>To learn how to use the package effectively, refer to the documentation <a class="reference internal" href="usage.html"><span class="doc">Usage</span></a>.</p>
-</section>
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-p"><td></td><td>
+       <strong>p</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#module-pycvcam_viz"><code class="xref">pycvcam_viz</code></a></td><td>
+       <em></em></td></tr>
+   </table>
 
 
                 </article>
@@ -363,62 +317,12 @@ Supports multiple file selection.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="installation.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installation</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="usage.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Usage</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pycvcam_viz.ZernikeDistortionVisualizerUI"><code class="docutils literal notranslate"><span class="pre">ZernikeDistortionVisualizerUI</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pycvcam_viz.ZernikeDistortionVisualizerUI.open_files"><code class="docutils literal notranslate"><span class="pre">ZernikeDistortionVisualizerUI.open_files()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pycvcam_viz.ZernikeDistortionVisualizerUI.remove_selected_files"><code class="docutils literal notranslate"><span class="pre">ZernikeDistortionVisualizerUI.remove_selected_files()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pycvcam_viz.ZernikeDistortionVisualizerUI.update_plot"><code class="docutils literal notranslate"><span class="pre">ZernikeDistortionVisualizerUI.update_plot()</span></code></a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/api.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div></div>
-
-</div></div>
               
             
           </div>
