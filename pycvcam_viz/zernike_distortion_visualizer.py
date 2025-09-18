@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 # Canvas Matplotlib
 # ============================================================
 class MplCanvas(FigureCanvas):
-    """Canvas matplotlib integrated into PyQt."""
+    r"""Canvas matplotlib integrated into PyQt."""
     def __init__(self, parent=None):
         fig = Figure(figsize=(5, 4), dpi=100)
         self.axes = fig.add_subplot(111)
@@ -32,7 +32,7 @@ class MplCanvas(FigureCanvas):
 # Bar plot on an axes
 # ============================================================
 def plot_bar_chart(mpl_canvas: MplCanvas, distortions: List[ZernikeDistortion], labels: List[str], mode: str = "x", absolute: bool = False) -> MplCanvas:
-    """Plot a bar chart of the Zernike coefficients for various models"""
+    r"""Plot a bar chart of the Zernike coefficients for various models"""
     # Check the inputs
     if not isinstance(mpl_canvas, MplCanvas):
         raise ValueError("Invalid MplCanvas object")
@@ -124,14 +124,24 @@ class DropWidget(QWidget):
         self._reset_style()
 
     def _highlight_style(self):
+        r"""
+        Highlight the widget style to indicate a valid drop target.
+        """
         self.setStyleSheet("background-color: #e8ffe8; border: 2px dashed #66aa66;")
         self.label.setText("Release to drop")
 
     def _reset_style(self):
+        r"""
+        Reset the widget style to the default.
+        """
         self.setStyleSheet("background-color: none; border: 2px dashed #cccccc;")
         self.label.setText("Drag your files here")
 
     def _extract_urls(self, mime):
+        r"""
+        Extract file URLs from the mime data.
+        Supports both URL lists and plain text with file paths.
+        """
         if mime.hasUrls():
             return list(mime.urls())
         if mime.hasText():
@@ -141,6 +151,10 @@ class DropWidget(QWidget):
 
     # --- Drag & Drop Events ---
     def dragEnterEvent(self, event):
+        r"""
+        Handle the drag enter event for the widget.
+        Accepts the event if it contains valid file URLs and highlights the widget.
+        """
         urls = self._extract_urls(event.mimeData())
         if urls:
             event.acceptProposedAction()
@@ -150,10 +164,18 @@ class DropWidget(QWidget):
             event.ignore()
 
     def dragLeaveEvent(self, event):
+        r"""
+        Handle the drag leave event for the widget.
+        Resets the widget style and clears the status bar message.
+        """
         self._reset_style()
         self.statusbar.clearMessage()
 
     def dropEvent(self, event):
+        r"""
+        Handle the drop event for the widget.
+        Loads the dropped files into the file_data dictionary and updates the file_list_widget.
+        """
         urls = self._extract_urls(event.mimeData())
         if not urls:
             event.ignore()
@@ -263,6 +285,9 @@ class ZernikeDistortionVisualizerUI(QMainWindow):
 
     # --- File management ---
     def remove_selected_files(self):
+        r"""
+        Remove the selected files from the list and the internal data storage.
+        """
         selected_items = self.file_list.selectedItems()
         for item in selected_items:
             file_path = item.text()
@@ -272,6 +297,10 @@ class ZernikeDistortionVisualizerUI(QMainWindow):
         self.update_plot()
 
     def open_files(self):
+        r"""
+        Open a file dialog to select and load Zernike distortion files.
+        Supports multiple file selection.
+        """
         dialog = QFileDialog(self, "Select files")
         dialog.setFileMode(QFileDialog.ExistingFiles)
         dialog.setNameFilters(["JSON Files (*.json)", "All Files (*)"])
@@ -302,6 +331,9 @@ class ZernikeDistortionVisualizerUI(QMainWindow):
 
     # --- Plot update ---
     def update_plot(self):
+        r"""
+        Update the matplotlib plot based on the selected files and figure type.
+        """
         selected_items = self.file_list.selectedItems()
         self.canvas.axes.clear()
 

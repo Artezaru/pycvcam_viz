@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from .visualizers import ZernikeDistortionVisualizerUI
+from .zernike_distortion_visualizer import ZernikeDistortionVisualizerUI
 from PyQt5.QtWidgets import QApplication
 
 def __main__() -> None:

@@ -40,6 +40,9 @@ exclude = ["laboratory", "laboratory.*", "tests", "tests*", "examples", "example
 [tool.setuptools.package-data]
 "pycvcam_viz.resources" = ["*"]
 
+[project.gui-scripts]
+pycvcam_viz = "pycvcam_viz.__main__:__main__"
+
 [tool.setuptools.dynamic]
 version = {attr = "pycvcam_viz.__version__.__version__"}
 
